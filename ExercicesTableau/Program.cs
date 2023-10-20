@@ -69,9 +69,9 @@
 
             // Exercice 5
             Console.WriteLine();
-            Console.WriteLine("Contient Bob?" + Exercice5A(nomsB));
-            Console.WriteLine("Indice Eric?" + Exercice5B(nomsB));
-            Console.WriteLine("Nombres de Philippe?" + Exercice5C(nomsB));
+            Console.WriteLine("Contient Bob? " + Exercice5A(nomsB));
+            Console.WriteLine("Indice Eric? " + Exercice5B(nomsB));
+            Console.WriteLine("Nombres de Philippe? " + Exercice5C(nomsB));
            
             Exercice5D(nomsB);
             for (int i = 0; i < nomsB.Length; i++)
@@ -132,11 +132,28 @@
             }
         }
 
+        static string Exercice6A(string texte)
+        {
+            return texte.Replace('m', 'b').Replace('M', 'B').Replace('n', 'd').Replace('N', 'D');
+        }
+
+        static void Exercice6B(string texte)
+        {
+            texte = texte.ToUpper();
+            for(int i = texte.Length - 1; i >= 0; i--)
+            {
+                Console.Write(texte[i]);
+            }
+            Console.WriteLine();
+        }
+
         static void Main(string[] _)
         {
             Exercice1();
             Exercice2();
             Exercice3();
+            Console.WriteLine(Exercice6A("Je suis très malade j'ai mal au nez;"));
+            Exercice6B("Ananas");
         }
     }
 }
